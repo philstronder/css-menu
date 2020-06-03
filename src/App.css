@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+/* Second attempt */
+
+.Menu {
+  color: #fff;
+  font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  background-color: rgba(40, 40, 40, .7);
+  border-radius: 4px;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  list-style: none;
+  padding: 10px 20px 5px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-level-2,
+.menu-level-3 {
+  display: none;
 }
+
+.menu-level-2 li,
+.menu-level-3 li {
+  margin-left: -40px;
+}
+
+li:hover > ul {
+  display: block;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.menu-level-2 li:hover {
+  background-color: rgba(120, 120, 120, .7);
+}
+
+.menu-level-3 li:hover {
+  background-color: rgba(174, 168, 168, 0.1);
+}
+
+
+
+
+/* First attempt */
+/* body {
+  background-color: rgb(157, 209, 230);
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 3px;
+}
+
+.menu-level-1 li {
+  position: relative;
+}
+
+.menu-level-2,
+.menu-level-3 {
+  
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  display: none;
+  position: absolute;
+  left: -10px;
+  z-index: 1;
+  transition: all .5s;
+}
+
+.menu-level-2 li:hover,
+.menu-level-3 li:hover {
+  background-color: rgba(80,80,80, .5);
+}
+
+li {
+  cursor: pointer;
+  width: 200px;
+  padding: 10px 40px 10px 0;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+li:hover > ul {
+  display: block;
+} */
